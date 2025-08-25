@@ -1,0 +1,38 @@
+.page_header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 4px 4px 4px #ccc;
+}
+
+.header_logo_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header_logo_txt {
+  font-size: 24px;
+  font-weight: bold;
+  color: #02d8ff;
+}
+.header_logo {
+  height: 40px;
+  width: 40px;
+}
+.header_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header_navitem {
+  padding: 4px 8px;
+  color: gray;
+  text-decoration: none;
+}
+
+.header_navitem:hover {
+  background-color: rgb(211, 248, 248);
+}

@@ -1,0 +1,31 @@
+.user_card {
+  display: flex;
+  margin: 20px;
+  box-shadow: 4px 4px 4px #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  gap: 20px;
+  max-width: 400px;
+}
+
+.user_card_img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+}
+
+.user_content {
+}
+
+.user_content_name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.user_content_age {
+  font-size: 20px;
+}
+.user_content_email {
+  color: gray;
+}
