@@ -1,0 +1,45 @@
+.counter_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin: 40px auto;
+}
+
+.counter_heading {
+  font-size: 2rem;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.counter_value {
+  font-size: 3rem;
+  color: #28a745;
+  margin: 20px 0;
+}
+
+.counter_actions {
+  display: flex;
+  gap: 10px;
+}
+
+.counter_actions button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.counter_actions button:hover {
+  background-color: #0056b3;
+}
