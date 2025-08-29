@@ -122,3 +122,11 @@
 .task_edit:hover {
   background-color: #e0a800;
 }
+
+.task_delete:disabled {
+  background-color: lightgray;
+}
+.task_edit:disabled {
+  background-color: lightgray;
+  color: white;
+}

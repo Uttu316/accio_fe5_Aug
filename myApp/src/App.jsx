@@ -4,6 +4,7 @@ import UserCard from "./components/userCard";
 import * as Users from "./data/userdata";
 import Counter from "./components/counter";
 import TodoList from "./components/todolist";
+import StopWatchBox from "./components/stopWatch";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       ))}
       <Counter />
       <TodoList />
+      <StopWatchBox />
     </div>
   );
 };

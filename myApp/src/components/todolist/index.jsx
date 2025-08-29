@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus, FaCheck } from "react-icons/fa";
 import {
   MdOutlineDeleteOutline as DeleteIcon,
   MdEdit as EditIcon,
@@ -7,8 +7,10 @@ import {
 import "./todolist.css";
 
 const TodoList = () => {
-  const [task, setTask] = useState("");
-  const [taskLists, setTaskList] = useState([]);
+  const [task, setTask] = useState(""); // stores user input
+  const [taskLists, setTaskList] = useState([]); // stores tasks
+  const [editTask, setEditTask] = useState(null);
+
   const onInput = (e) => {
     const value = e.target.value;
     setTask(value); // store user input
@@ -28,9 +30,28 @@ const TodoList = () => {
     const newitems = taskLists.filter((item) => item.id !== id);
     setTaskList(newitems);
   };
+  const onEdit = (taskinfo, index) => {
+    taskinfo.index = index;
+    setEditTask(taskinfo);
+    setTask(taskinfo.task); // setting input value
+  };
+  const onUpdate = () => {
+    const currEditTask = editTask; // editTask has id and index
+
+    currEditTask.task = task; // assign updated user input
+
+    const position = currEditTask.index; // position of editing item
+    setTaskList((currList) => {
+      currList[position] = currEditTask; // updating item on its position
+      return currList; // return updated list in state
+    });
+
+    setEditTask(null); //  reset editmode
+    setTask(""); // reset user input
+  };
 
   const isEmpty = taskLists.length === 0; // check if no task available
-
+  const isEditMode = editTask !== null;
   return (
     <div className="todolist_wrapper">
       <div className="todolist_input_box">
@@ -39,24 +60,36 @@ const TodoList = () => {
           onChange={onInput}
           placeholder="Enter task here..."
         />
-        <button disabled={task.length < 3} onClick={onAdd}>
-          Add <FaPlus />
-        </button>
+        {!isEditMode && (
+          <button disabled={task.length < 3} onClick={onAdd}>
+            Add <FaPlus />
+          </button>
+        )}
+        {isEditMode && (
+          <button disabled={task.length < 3} onClick={onUpdate}>
+            Update <FaCheck />
+          </button>
+        )}
       </div>
       <div className="todolist_items">
         {isEmpty && <h2 className="task_list_empty">No task Available</h2>}
         {!isEmpty &&
-          taskLists.map((item) => (
+          taskLists.map((item, index) => (
             <div className="task_item" key={item.id}>
               <p className="task_text">{item.task}</p>
               <div className="task_actions">
                 <button
+                  disabled={isEditMode}
                   onClick={() => onDlt(item.id)}
                   className="task_action task_delete"
                 >
                   <DeleteIcon />
                 </button>
-                <button className="task_action task_edit">
+                <button
+                  disabled={isEditMode}
+                  onClick={() => onEdit(item, index)}
+                  className="task_action task_edit"
+                >
                   <EditIcon />
                 </button>
               </div>
