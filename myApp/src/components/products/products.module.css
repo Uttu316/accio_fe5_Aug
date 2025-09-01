@@ -1,0 +1,27 @@
+.productsContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.productsHeading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.productsLoading,
+.productsError {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 2rem;
+}
+
+.productsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

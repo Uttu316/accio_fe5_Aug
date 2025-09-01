@@ -1,0 +1,21 @@
+.pageNav {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pageNavItem {
+  text-decoration: none;
+  color: #495057;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 500;
+}
+
+.pageNavItem:hover {
+  background-color: #e9ecef;
+  color: teal;
+}
