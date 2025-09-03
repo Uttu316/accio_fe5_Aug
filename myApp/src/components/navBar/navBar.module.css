@@ -19,3 +19,8 @@
   background-color: #e9ecef;
   color: teal;
 }
+
+.pageNavItem_active {
+  font-weight: bold;
+  color: teal;
+}

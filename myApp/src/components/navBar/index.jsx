@@ -1,10 +1,11 @@
+import { NavLink } from "react-router";
 import styles from "./navBar.module.css";
 const NavBar = () => {
   return (
     <nav className={styles.pageNav}>
-      <NavBarItem link={"#"} label={"About"} />
-      <NavBarItem link={"#"} label={"Contact"} />
-      <NavBarItem link={"#"} label={"Cart"} />
+      <NavBarItem link={"/about"} label={"About"} />
+      <NavBarItem link={"/contact"} label={"Contact"} />
+      <NavBarItem link={"/cart"} label={"Cart"} />
     </nav>
   );
 };
@@ -12,8 +13,12 @@ export default NavBar;
 
 const NavBarItem = ({ label, link }) => {
   return (
-    <a className={styles.pageNavItem} href={link}>
+    <NavLink
+      className={({ isActive }) => `${styles.pageNavItem} 
+        ${isActive ? styles.pageNavItem_active : ""}`}
+      to={link}
+    >
       {label}
-    </a>
+    </NavLink>
   );
 };
