@@ -2,6 +2,7 @@ import PageHeader from "../../components/pageHeader";
 import styles from "./notFoundPage.module.css";
 import notFoundImage from "../../assets/notFound.svg";
 import { useNavigate } from "react-router";
+import PageContainer from "../../components/pageContainer";
 
 const NotFoundPage = () => {
   const navigate = useNavigate();
@@ -13,8 +14,7 @@ const NotFoundPage = () => {
   };
 
   return (
-    <div>
-      <PageHeader />
+    <PageContainer>
       <div className={styles.notFoundContainer}>
         <h1 className={styles.title}>404 - Page Not Found</h1>
         <p className={styles.message}>
@@ -29,7 +29,7 @@ const NotFoundPage = () => {
           Go to Home
         </button>
       </div>
-    </div>
+    </PageContainer>
   );
 };
 

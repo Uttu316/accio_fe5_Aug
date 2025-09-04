@@ -1,0 +1,89 @@
+.cartList {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.payContainer {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.payBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payBtn:hover {
+  background-color: #0056b3;
+}
+
+.emptyMessage {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-top: 50px;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.details {
+  flex: 1;
+}
+
+.title {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.description {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.price {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: teal;
+}
+
+.removeBtn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.removeBtn:hover {
+  background-color: #c82333;
+}

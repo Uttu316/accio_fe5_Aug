@@ -4,6 +4,7 @@ import productImage from "../../assets/hero.svg";
 import { useParams } from "react-router";
 import { useCallback, useEffect, useState } from "react";
 import { getProduct } from "../../services/getProduct";
+import PageContainer from "../../components/pageContainer";
 
 const ProductPage = () => {
   const { productId } = useParams();
@@ -36,9 +37,7 @@ const ProductPage = () => {
   const noProduct = isDone && product === null;
 
   return (
-    <div>
-      <PageHeader />
-
+    <PageContainer>
       {isLoading && (
         <h2 className={styles.loading}>Loading product for you...</h2>
       )}
@@ -74,7 +73,7 @@ const ProductPage = () => {
           </div>
         </div>
       )}
-    </div>
+    </PageContainer>
   );
 };
 

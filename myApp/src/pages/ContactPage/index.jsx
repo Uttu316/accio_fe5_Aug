@@ -1,11 +1,11 @@
 import PageHeader from "../../components/pageHeader";
 import styles from "./contactPage.module.css";
 import reactImage from "../../assets/react.svg";
+import PageContainer from "../../components/pageContainer";
 
 const ContactPage = () => {
   return (
-    <div>
-      <PageHeader />
+    <PageContainer>
       <div className={styles.contactContainer}>
         <h1 className={styles.contactTitle}>Contact Us</h1>
         <p className={styles.contactDescription}>
@@ -25,7 +25,7 @@ const ContactPage = () => {
         </div>
         <img src={reactImage} alt="React" className={styles.contactImage} />
       </div>
-    </div>
+    </PageContainer>
   );
 };
 

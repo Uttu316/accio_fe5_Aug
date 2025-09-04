@@ -5,21 +5,26 @@ import PracticePage from "./pages/PracticePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ProductPage from "./pages/ProductPage";
+import CartPage from "./pages/CartPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import CartProvider from "./contexts/cartContext";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/practice" element={<PracticePage />} />
-        <Route path="/product/:productId" element={<ProductPage />} />
+    <CartProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/practice" element={<PracticePage />} />
+          <Route path="/product/:productId" element={<ProductPage />} />
+          <Route path="/cart" element={<CartPage />} />
 
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </BrowserRouter>
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 };
 export default App;

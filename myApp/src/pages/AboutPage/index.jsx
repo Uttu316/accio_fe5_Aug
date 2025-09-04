@@ -1,11 +1,11 @@
 import PageHeader from "../../components/pageHeader";
 import styles from "./aboutPage.module.css";
 import heroImage from "../../assets/hero.svg";
+import PageContainer from "../../components/pageContainer";
 
 const AboutPage = () => {
   return (
-    <div>
-      <PageHeader />
+    <PageContainer>
       <div className={styles.aboutContainer}>
         <h1 className={styles.aboutTitle}>About Us</h1>
         <p className={styles.aboutDescription}>
@@ -15,7 +15,7 @@ const AboutPage = () => {
         </p>
         <img src={heroImage} alt="Hero" className={styles.aboutImage} />
       </div>
-    </div>
+    </PageContainer>
   );
 };
 

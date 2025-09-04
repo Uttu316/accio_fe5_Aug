@@ -13,6 +13,7 @@
   border-radius: 4px;
   transition: background-color 0.3s, color 0.3s;
   font-weight: 500;
+  position: relative;
 }
 
 .pageNavItem:hover {
@@ -23,4 +24,20 @@
 .pageNavItem_active {
   font-weight: bold;
   color: teal;
+}
+
+.count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: salmon;
+  color: white;
+  height: 14px;
+  width: 14px;
+  font-size: 10px;
+  font-weight: bold;
 }

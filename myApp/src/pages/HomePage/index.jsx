@@ -1,14 +1,14 @@
 import HeroContainer from "../../components/heroContainer";
+import PageContainer from "../../components/pageContainer";
 import PageHeader from "../../components/pageHeader";
 import Products from "../../components/products";
 
 const HomePage = () => {
   return (
-    <div>
-      <PageHeader />
+    <PageContainer>
       <HeroContainer />
       <Products />
-    </div>
+    </PageContainer>
   );
 };
 export default HomePage;
