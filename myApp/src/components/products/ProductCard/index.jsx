@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import styles from "./productCard.module.css";
 import Card from "../../card";
 import { useContext, useMemo } from "react";
-import { CartContext } from "../../../contexts/cartContext";
+import { CartContext } from "../../../contexts/CartContext";
 
 const ProductCard = ({ product }) => {
   const { addToCart, cartLength, removeFromCart, isInCart } =

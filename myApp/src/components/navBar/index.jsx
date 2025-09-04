@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import styles from "./navBar.module.css";
 import { useContext } from "react";
-import { CartContext } from "../../contexts/cartContext";
+import { CartContext } from "../../contexts/CartContext";
 const NavBar = () => {
   const { cartLength } = useContext(CartContext);
   return (

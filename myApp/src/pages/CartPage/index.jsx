@@ -1,6 +1,6 @@
 import { useContext, useMemo } from "react";
 import PageContainer from "../../components/pageContainer";
-import { CartContext } from "../../contexts/cartContext";
+import { CartContext } from "../../contexts/CartContext";
 import styles from "./cartPage.module.css";
 
 const CartItem = ({ item, onRemove }) => {

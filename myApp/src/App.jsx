@@ -7,7 +7,7 @@ import ContactPage from "./pages/ContactPage";
 import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import CartProvider from "./contexts/cartContext";
+import CartProvider from "./contexts/CartContext";
 
 const App = () => {
   return (
